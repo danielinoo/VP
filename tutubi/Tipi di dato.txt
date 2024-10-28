@@ -6,4 +6,5 @@ sequenza di bit che codifica un video
 TipoRagione:
 (violazione di copyright,violazione delle normative sulla privacy,incitamento all odio)
 
-Play_tipo:("pubblica","privata")
+Play_tipo:
+("pubblica","privata")
