@@ -1,0 +1,15 @@
+specifica usecase playlist:
+
+nuova_playlist(nome, play_tipo["pubblica","privata"]):
+
+pre: 
+    p:Playlist non è (gia) un link di ut_pl
+
+post:
+    viene creato un oggetto result:Playlist
+    tale che viene creato il link:
+
+    (result,u): ut_pl
+    con i seguenti attributi:
+    result.nome = nome
+    result.Play_tipo = play_tipo
