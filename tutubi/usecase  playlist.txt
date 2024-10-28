@@ -1,9 +1,9 @@
 specifica usecase playlist:
 
-nuova_playlist(nome, play_tipo["pubblica","privata"]):
-
+nuova_playlist(nome: Stringa, Play_tipo :play_tipo): Playlist
 pre: 
     p:Playlist non è (gia) un link di ut_pl
+non esiste p.nom = nome
 
 post:
     viene creato un oggetto result:Playlist
@@ -13,3 +13,12 @@ post:
     con i seguenti attributi:
     result.nome = nome
     result.Play_tipo = play_tipo
+
+
+cerca_playlist(u:Utente[0..1],nomeStringa[0..1], Playlist [0..*]):
+
+pre: nessuna
+post:
+    reseult è l iinsieme degli oggetti p: pLaylist tali che :
+        -se l argomento nome è valorizzato, allora:
+        -
