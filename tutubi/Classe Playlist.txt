@@ -1,0 +1,9 @@
+Specifica dei dati della classe Playlist:
+
+Play_tipo: ('pubblica','privata')
+
+
+vincoli esterni:
+
+
+

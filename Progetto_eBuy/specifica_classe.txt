@@ -1,0 +1,44 @@
+specifica classe Utente:
+
+feedback_ricevuti(): Feeedback [0..*]
+
+    pre:
+    post:
+            sia P l ' insieme di tutte le instanze p: PostOggetto tali che (this,p): vende;
+            result è l'insieme di tutte le instanze f: Feeedback tali che seiste (f,p): riguarda per qualche p : P
+
+
+
+specifica classe PostAsta:
+
+dib_aggiudicatario(): Bid
+
+    pre:
+        this.scadenza < adesso
+
+    post:
+        Sia_result: Bid tale che:
+            -(result,this): bid_asta
+            -non esististe alcun b: Bid tale che:
+                -(b,this): bid_asta
+                -b.istante > result.instante
+
+
+prezzo_finale(): Reale >= 0
+    pre:
+        this.scadenza > adesso
+    post:
+        result = this.bid_aggiudicatario().prezzo_asta()
+
+
+
+specifica classe PostoCompraSubito:
+
+acquirente(): UtentePrivato
+
+    pre:
+
+    post:
+
+        Sia_result: UtentePrivato tale che (result,this): acquista
+

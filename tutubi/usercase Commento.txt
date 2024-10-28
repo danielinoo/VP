@@ -1,0 +1,16 @@
+specifica user-case Commento:
+nuovo_commento(v:Video,testo:Stringa): Commento
+pre:
+
+    l'utente 'u' ha visualizzato il video prima dell' istante corrente,
+    ovvero:
+    esiste un oggetto vis:Visualizzazione associato a 'u' ed a 'v' e tale che vis.istante < istante_corrente.
+
+post:
+    viene creato l' oggetto result:Commento con i seguenti valori per i suoi attributi:
+    -result.istante: istante_corrente
+    -result.testo = testo
+
+    viene creato un link(result,v):
+        -(result,v).commento = commento
+        -(result,v).istante = istante_corrente

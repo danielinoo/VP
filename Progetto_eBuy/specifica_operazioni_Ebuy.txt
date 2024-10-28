@@ -1,0 +1,23 @@
+specifica classe PostoCompraSubito:
+
+acquirente(): UtentePrivato
+
+    pre: 
+        sia p: UtentePrivato tale che (p,this): acquista
+
+    post:
+
+        Sia_result: UtentePrivato tale che (result,this): acquista
+
+
+specifica classe PostAsta:
+
+acquirente(): UtentePrivato
+
+    pre:
+        ( ":" effettivamente ritorna un bid)
+        this.bid_aggiudicatario(): Bid
+    post:
+        sia b: Bid = this.bid_aggiudicatario()
+        sia_result: UtentePrivato tale che (result,this): bidder
+

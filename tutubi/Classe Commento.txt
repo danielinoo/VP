@@ -1,0 +1,4 @@
+[c.commento.no_commento_prima_di_istante_corrente]
+(u : utente. c: commento)
+istante visualizzazione legato a 'u' deve essere precedente dell' istante del commento dell' utente 'u'
+-visualizzazione.istante di 'u' < c.istante di 'u'

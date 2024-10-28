@@ -1,0 +1,33 @@
+operazioni dello use-case Ricerca:
+
+oggetti_categorie(C: Categoria [1..*]): PostOggetto [0..*]
+
+    pre:
+
+    post: 
+            sia result: l' insieme di po: PostOggetto tali che (c,po): appartiene  e c appartiene all' insieme C  
+
+    
+radici(): Categoria [1..*]
+
+    pre:
+        deve esistere almeno un istanza di Categoria
+        
+
+    post:
+
+        sia result: l' insieme di rc:Categoria tale che non esiste (c1 : sopracategoria,rc: sottocategoria): categoria_della_categoria
+
+
+
+utenti_senza_bid(inizio: DataOra, fine: DataOra): Privato [0..*]
+
+    pre:
+        
+        sia che l'instante_offerta di Bid non esiste tra inzio e fine
+
+        
+
+    post:
+ 
+        sia result: l' insieme di up :Utente_privato tale che non esiste offre

@@ -1,0 +1,11 @@
+[v.visualizzazione.no_visualizzazioni_dopo_censuara]
+
+per ogni link (u:Utente, v :Video) di associazione Valutazione,
+deve esistere un oggetto vis: visualizzazione tale che:
+-è relativo a utente u
+- è relativo al v Video
+-vis.istante < (u,v).istante
+
+[V.valutazione.video_non_di_se_stesso]
+    per ogni link (u:Utente, v :Video) di associazione Valutazione,
+    il video 'v' non deve essere dell' utente 'u', 

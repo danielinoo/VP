@@ -1,0 +1,3 @@
+Lavora(_cfDipendente_:CodiceFiscale , data_assunzione: Date,_idOfficina_: integer)
+        FK: _cfDipendente references Dipendente(staff)
+        FK: _idOfficina_ references Officina(id)

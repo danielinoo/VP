@@ -1,0 +1,20 @@
+specifica user-case Valutazione:
+
+valuta(u : Utente,v : Video, voto: 0..5): ...
+pre: 
+    -Sia u:Utente l'oggetto di classe Utente che rappresenta l'attore che ha invocato l'operazione
+    -'u' ha già visualizzato 'v', ovvero:
+    esiste un oggetto vis: Visualizzazione tale che:
+        -è legato a utente u
+        - è legato al v Video
+        -vis.istante < istante_corrente
+
+    - 'u' non ha già valutato 'v', ovvero:
+        non esiste alcun link(u,v): Valutazione
+    -'u' non è l'autore di di 'v',ovvero(u,v) non è un link di associazione utente_video
+
+post:
+    viene creato un link (u,v):valutazione con valori per attributi:
+        -(u,v).voto = voto
+        -(u,v).istante = istante_corrente
+
