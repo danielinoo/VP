@@ -19,6 +19,9 @@ cerca_playlist(u:Utente[0..1],nomeStringa[0..1], Playlist [0..*]):
 
 pre: nessuna
 post:
-    reseult è l iinsieme degli oggetti p: pLaylist tali che :
+    reseult è l insieme degli oggetti p: pLaylist tali che :
         -se l argomento nome è valorizzato, allora:
-        -
+            p.nome <> ".*?"+ parte_di_nome + ".*"
+
+
+
