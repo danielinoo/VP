@@ -1,0 +1,12 @@
+specifica usecase registrazione:
+
+nuovo_utente (nome : Stringa): Utente
+pre: 
+     non esiste u: Utente tale che u.nome = nome
+
+post:
+     viene creato u : utente tale che:
+        -u.nome = nome
+        -u.iscrizione = istante_corrente
+
+    result = u

@@ -2,14 +2,14 @@ specifica usecase playlist:
 
 nuova_playlist(nome: Stringa, Play_tipo :play_tipo): Playlist
 pre: 
-    p:Playlist non è (gia) un link di ut_pl
+    p:Playlist non è (gia) un link di pl_vid
 non esiste p.nom = nome
 
 post:
     viene creato un oggetto result:Playlist
     tale che viene creato il link:
 
-    (result,u): ut_pl
+    (result,u): pl_vid
     con i seguenti attributi:
     result.nome = nome
     result.Play_tipo = play_tipo
@@ -25,3 +25,61 @@ post:
 
 
 
+pl_vid = pl_vid
+
+aggiungi_a_playlist(p:Playlist, v: Video, pos: integer > 0 [0..1]):
+
+pre:    
+    SIA U : UTENTE L OGGETTO ASSOCIATO ALL ATTORE CHE HA INVOCATO L operazione
+
+    deve essere (u,p) : pl_vid
+
+    il video non deve essere di classe VideoCensurato
+
+    non deve seistere s: Playlist_video tale che :
+    -s.pos = pos
+    -(p,s) : pl_vid
+
+
+post:
+
+    se l arg. pos non è valorizzato, allora:
+    sia max_pos il massimo valore dell attributo 'pos' 
+    tra tutti gli oggetti s:Playlist_video a 'p'
+    sia pos = max_pos +1
+
+    viene creato s: Playlist_video con s.pos = pos
+    viene creato il link s:pl_vid
+    viene creato il link : vid_pos
+
+
+
+rimuovi_da_playlist(s: Playlist_video):
+
+pre:
+    
+    SIA U : UTENTE L OGGETTO ASSOCIATO ALL ATTORE CHE HA INVOCATO L operazione
+
+    sia p:PLaylist l oggetto associasto s
+    deve essere (u,p): pl_vid
+
+post:
+
+    vine eliminato l oggetto 's' con tutti i suoi link
+
+
+riiordina_playlist(s:playlist_video)
+
+    pre:
+    SIA U : UTENTE L OGGETTO ASSOCIATO ALL ATTORE CHE HA INVOCATO L operazione
+
+    sia p:PLaylist l oggetto associasto s
+    deve essere (u,p): pl_vid
+
+    non deve esistere s: Playlist_video tale che:
+    -s.pos = nuova_pos
+    -(p,s):pl_vid
+
+    post:
+
+        

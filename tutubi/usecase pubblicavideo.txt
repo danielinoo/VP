@@ -1,0 +1,41 @@
+specifica usecase PubblicazioneVideo:
+
+nuovo_video(
+
+    titolo : stringa,
+    descrizione : stringa,
+    vid : Filevideo,
+    cat: Categoria,
+    t: tag[1..*],
+    originale : Video [0..1]
+
+) : Video
+
+pre:
+
+SIA U : UTENTE L OGGETTO ASSOCIATO ALL ATTORE CHE HA INVOCATO L operazione
+
+    se 'orgin' è valorizzato, allora (u,orig) 
+    non deve essere un link di associazione utente_video
+
+    se 'orig' è valorizzato, allora orig.istante < istante_corrente
+ 
+
+
+
+POST:
+
+viene creato v:Video con i seguenti valori per i suoi attributi:
+    -v.titolo = titolo
+    -v.descrizione = descrizione
+    -v.vid = vid
+    -v.cat = cat
+    -v.istante = istante_corrente7
+
+-viene creato il link (cat:v): cat_video
+- per ogni tag t:t viene creato il link (t,v): tag_video
+- viene creato il link (u,v): utente_video
+-se l arg. origin è valorizzato,  viene creato il link
+ (v:risposta, orign : originale): video_risposta
+
+ result = v.
