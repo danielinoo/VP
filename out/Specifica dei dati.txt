@@ -1,0 +1,10 @@
+specifiche dati di out:
+
+cf: 
+
+indirizzo:
+
+tipo_spettacolo: {concerto,rappresentazione teatrale, film}
+
+
+

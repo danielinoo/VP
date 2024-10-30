@@ -13,8 +13,8 @@ spettacolo:
     4.1 titolo
     4.2 tipologia
     4.3 genere
-    4.4 orari
-    4.5 artisti
+    4.4 orari (vedere tipo orario)
+    4.5 artisti (vedere se va bene Stringa)
 
 utente:
     5.1 nome
@@ -27,8 +27,20 @@ prenotazione:
 settore:
     costo
 
-suggerimenti:
 
+
+
+--------------
+
+utente:
+    consulatare il calendario degli spettacoli:
+
+    vedere tipologia spettacolo previsti per tot giorno
+
+
+prenotazione posti utente:
+costo dipende dal settore
+n posti prenotabili dall utente: atto_prenotazione -> n posti disponibili
 
 
 
