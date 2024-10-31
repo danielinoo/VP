@@ -12,5 +12,3 @@ TipoRagione:
 
 Play_tipo:
 ("pubblica","privata")
-
-
