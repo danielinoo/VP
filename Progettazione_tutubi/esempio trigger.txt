@@ -1,0 +1,33 @@
+per ogni enupla:
+
+-caratteristiche enupla 
+(en.nome = nome
+en.video = video)
+
+eventi da intercettare:
+1) nome evento
+2) nome evento
+3)nome evento
+
+
+
+
+
+
+-- nome evento e richiamo della funzione (nome_funzione)
+
+TRIGGER (nome del trigger)
+
+EVENTI: nome_funzione(query) in nome_classe che stamo a fa
+QUANDO SCATTARE: dopo evento intercettato
+
+nome_funzione:
+select..
+from..
+where..
+
+----------------------------------------------------------------------------------
+
+
+
+--nome evento..........

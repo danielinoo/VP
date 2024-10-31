@@ -44,3 +44,5 @@ n posti prenotabili dall utente: atto_prenotazione -> n posti disponibili
 
 
 
+operazione posti (tot link di posto-settore ,totale posti della sala facendo la somma dei posti nei settori)
+
